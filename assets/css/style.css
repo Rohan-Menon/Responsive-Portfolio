@@ -38,6 +38,15 @@ body, html {
     transform:translate(-50%);
 }
 
+.contentArea:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
 .allSections{
     background-color: #ffffff;
     overflow: hidden;
@@ -56,12 +65,14 @@ body, html {
 }
 
 #connectSection{
+    margin-top:20px;
     float:right;
     width: 270px;
 }
 
 
 #mainSection {
+    float: left;
     width: 650px;
     padding: 10px;
     margin-top:20px;
@@ -198,7 +209,140 @@ body, html {
 
 
 
+/*MEDIA QUERIES*/
 
+@media screen and (max-width: 980px) {
+
+    .contentArea{
+        width: 768px;
+    }
+    
+    #mainSection{
+        width: 400px;
+    }
+
+    #nameInput, #emailInput, #contactMessage{
+        width:350px;
+    }
+
+    #rightPortfolioImages{
+        float:none;
+    }
+
+    .portfolioContainers{
+        width: 400px;
+    }
+    
+    .portfolioImages{
+        width:400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contentArea{
+        width: 700px;
+    }
+    #mainSection{
+        float:none;
+        width:700px;
+    }
+    #connectSection{
+        float:none;
+        width: 700px;
+    }
+
+    #nameInput, #emailInput, #contactMessage{
+        width:650px;
+    }
+
+    #rightPortfolioImages{
+        float:right;
+        padding-right:10px;
+    }
+
+    .portfolioContainers{
+        width: 300px;
+    }
+    
+    .portfolioImages{
+        width:300px;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    
+    .contentArea{
+        width: 550px;
+    }
+
+    #mainSection{
+        float:none;
+        width:550px;
+    }
+    #connectSection{
+        float:none;
+        width: 550px;
+    }
+
+    #fullName{
+        background-color: #4aaaa5;
+        margin: 0px;
+        padding: 25px;
+        font-size: 40px;
+        color: #ffffff;
+        float:none;
+        text-align: center;
+    }
+
+    #navBar{ 
+        width:640px;
+        position: static;
+        right: 0%;
+        top:0px;
+        margin-top: 20px;
+        margin-bottom: 20px;5
+    }
+    
+    .navLinks{
+        color: #777777;
+        text-decoration: none;
+        font-size: 20px;
+        
+    }
+    
+    #aboutLink{
+        border-right: solid 1px #dddddd;
+        padding: 10px 60px 10px 60px;
+
+    }
+    
+    #portfolioLink{
+        border-right: solid 1px #dddddd;
+        padding: 10px 60px 10px 60px;
+    }
+    
+    #contactLink{
+        padding: 10px 60px 10px 60px;
+    }
+    
+    #nameInput, #emailInput, #contactMessage{
+        width:500px;
+    }
+
+    #rightPortfolioImages{
+        float:none;
+        padding-right:10px;
+    }
+
+    .portfolioContainers{
+        width: 550px;
+    }
+    
+    .portfolioImages{
+        width:550px;
+    }
+}
 
 
 
